@@ -16,7 +16,6 @@ script:
   - gulp docs
   - gulp package
   - gulp bower
-  - cat ./coverage/lcov.info | ./node_modules/.bin/coveralls
 
 notifications:
   slack: chartjs:pcfCZR6ugg5TEcaLtmIfQYuA
@@ -39,29 +38,7 @@ addons:
 
 deploy:
 - provider: script
-  script: ./scripts/release.sh
-  skip_cleanup: true
-  on:
-    branch: release
-- provider: script
   script: ./scripts/deploy.sh
   skip_cleanup: true
   on:
     all_branches: true
-- provider: releases
-  api_key: $GITHUB_AUTH_TOKEN
-  file:
-  - "./dist/Chart.bundle.js"
-  - "./dist/Chart.bundle.min.js"
-  - "./dist/Chart.js"
-  - "./dist/Chart.min.js"
-  - "./dist/Chart.js.zip"
-  skip_cleanup: true
-  on:
-    tags: true
-- provider: npm
-  email: $NPM_AUTH_EMAIL
-  api_key: $NPM_AUTH_TOKEN
-  skip_cleanup: true
-  on:
-    tags: true

@@ -3,8 +3,8 @@
 set -e
 
 TARGET_DIR='gh-pages'
-TARGET_BRANCH='master'
-TARGET_REPO_URL="https://$GITHUB_AUTH_TOKEN@github.com/chartjs/chartjs.github.io.git"
+TARGET_BRANCH='gh-pages'
+TARGET_REPO_URL="https://$GITHUB_AUTH_TOKEN@github.com/simonbrunel/chartjs.github.io.git"
 VERSION_REGEX='[[:digit:]]+.[[:digit:]]+.[[:digit:]]+(-.*)?'
 
 # Make sure that this script is executed only for the release and master branches
