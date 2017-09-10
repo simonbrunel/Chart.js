@@ -14,7 +14,6 @@
     "browserify-istanbul": "^2.0.0",
     "bundle-collapser": "^1.2.1",
     "child-process-promise": "^2.2.1",
-    "coveralls": "^2.13.1",
     "gitbook-cli": "^2.3.0",
     "gulp": "3.9.x",
     "gulp-concat": "~2.6.x",
